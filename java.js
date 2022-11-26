@@ -2,7 +2,7 @@
 console.log('You are about to start a game of ROCK PAPER SCISSORS, so be prepered. The first player to get five wins... win. To start the game write "playTheGame()" in the console')
 
 
-/* Here i declear a valubels */
+/* Here i declear a valuebels */
 
 scissors = 'scissors'
 rock = 'rock'
@@ -14,9 +14,6 @@ let shortGameResult
 let userScore = 0
 let computerScore = 0
 
-/*  This function creates a random number from 0-2 and the adds one. It then copy the 
-value to be either rock paper or scissors by testing if the random number equals the 
-value recurret for that valuble. At last i returns the value of what it was equal to  */
 
 function getComputerChoice(){
     result = Math.floor(Math.random()*3)+1 
@@ -34,7 +31,6 @@ function getComputerChoice(){
 /* This function should make a promt that lets the user write either rock paper or 
 scissors. The computer should take any value and make it toLowerCase. Then it 
 should use it to give a userChoice, thats either rock paper or scissors */
-
 
 function getUserChoice(){
    userEntryChoice = prompt('please enter either "rock", "paper" or "scissors"').toLowerCase()
@@ -69,6 +65,11 @@ function declearGameWinner(){
         shortGameResult = 'computerWon'} 
 }
 
+/* 
+This function adds one point to either userScore or computerScore, if either one wo,
+and the logs the score in the console
+*/
+
 function scoreCounter(){
     if (shortGameResult === 'userWon') {
         userScore += 1
@@ -79,6 +80,11 @@ function scoreCounter(){
     console.log ('Computer score:' + computerScore + ' Your score: '+ userScore)
 }
 
+/* 
+This function plays a game. First a have added a loop to play until userScore or computerScore
+is above 5 points. It runs the functions to play a game and declears how it went.
+At last it declears a ultimate winner. 
+*/
 
 function playTheGame(){
 
